@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Sort</title>
+</head>
+<body>
+
+<form name="Sort">
+    <label for="name">Name</label>
+    <input type="radio" name="sortby" id="name" value="name">
+    <label for="surname">Surname</label>
+    <input  type="radio" name="sortby" id="surname" value="surname">
+    <label for="email">Email</label>
+    <input  type="radio" name="sortby" id="email" value="email">
+    <label for="age">Age</label>
+    <input  type="radio" name="sortby" id="age" value="age">
+    <label for="profession">Profession</label>
+    <input  type="radio" name="sortby" id="profession" value="profession"><br>
+    <label for="checkbox">Специальная сортировка</label>
+    <input type="checkbox"  name="specialSort" id="checkbox"><br>
+    <input type="button" value="Sort Me" class="btn btn-primary" onclick="sortUsers(users)">
+</form>
+<div id="test"></div>
+</body>
+</html>

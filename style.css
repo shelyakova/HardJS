@@ -1,0 +1,42 @@
+form {
+    background-color: #c0c2c4;
+    margin: 0 auto;
+    text-align: center;
+    width: 55%;
+    padding-bottom: 5px;
+}
+
+label {
+    margin-left: 10px;
+}
+
+#test {
+    margin: 0 auto;
+    text-align: left;
+    width: 55%;
+}
+
+#test:after {
+    content		: ".";
+    visibility	: hidden;
+    display		: block;
+    height		: 0;
+    clear		: both;
+}
+
+#test div {
+    max-height: 25%;
+    width: 33.3%;
+    float: left;
+    padding-right: 10px;
+    background-color: #8ebbed;
+    border-bottom: solid 1px #303d2f;
+}
+
+#test div:nth-child(2n+1) {
+    background-color: #7eb1e5;
+}
+
+p {
+    padding-left: 5px;
+}

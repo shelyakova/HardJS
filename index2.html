@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Sorting</title>
+	</head>
+	<body>
+	<div id="test"></div>
+	<script>
+		function checkUserNumber() {
+			var userNumbers = prompt("Сколько пользователей добавить?"),
+
+			if (userNumbers < 3) {
+				alert("Необходимо добавить минимум трех пользователей");
+				return checkUserNumber();
+			} else {
+				return userNumbers;
+			}
+		}
+		
+		function getUserInfo() {
+			return promt("Введите данные о пользователей через запятую");
+		}
+
+		function addUser(userInfo)
+		{
+			var values = userInfo.split(', '),
+			user = {};
+			user.name = values[0];
+			user.surname = values[1];
+			user.email = values[2];
+			user.age = values[3];
+			user.profession = values[4];
+			return user;
+		}
+
+		function sort(users, sorting) {
+			var result = users.sort(function (a, b) {
+				if (a[sorting] > b[sorting]) {
+					return 1;
+				}
+				if (a[sorting] < b[sorting]) {
+					return -1;
+				}
+				return 0;
+			});
+			return result;
+		}
+		
+		function print(result) {
+			var element = document.createElement("div");
+			element.id = 'output';
+			for(var i = 0; i < 3; i++) {
+					document.getElementById('test').innerHTML += "<p>" + "Имя: " + result[i].name + "</p>" +
+					"<p>" + "Фамилия: " + result[i].surname + "</p>" +
+					"<p>" + "Почта: " + result[i].email + "</p>" +
+					"<p>" + "Возраст: " + result[i].age + "</p>" +
+					"<p>" + "Профессия: " + result[i].profession + "</p>";
+					i++
+			}
+			
+		}
+
+		var userNumbers = checkUserNumber();
+		var = users = [];
+		for(var i = 0; i < userNumbers; i++) {
+			users.push(addUser(getUserInfo()));
+		}
+		var sorting = promt("По какому полю отсортировать?");
+		var result = sort(users, sorting);
+		print(result, sorting);
+	</script>
+	</body>
+</html>
